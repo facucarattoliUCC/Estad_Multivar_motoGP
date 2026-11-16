@@ -1,0 +1,5 @@
+Bloque,Variables,n_variables,r_abs_prom_intra
+1,"suelo_c, humedad_pct, aire_c",3,0.6
+2,"vuelta_mejor, vueltas",2,0.84
+3,mejor_vuelta_s,1,NA
+4,"gap_primero_s, gap_previo_s",2,0.61

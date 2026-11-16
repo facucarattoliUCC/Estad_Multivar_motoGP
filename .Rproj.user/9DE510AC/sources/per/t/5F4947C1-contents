@@ -1,0 +1,32 @@
+# ==========================================================================================
+# Paso R1: paquetes y ruta
+
+# install.packages(c("readr", "dplyr", "tibble"))   # solo la primera vez
+
+library(readr)
+library(dplyr)
+library(tibble)
+
+getwd()   # debe terminar en ".../proyecto"
+
+# ==========================================================================================
+# Paso R2: importar los CSV
+clasif      <- read_csv("venv/data/clean/clasificaciones.csv", guess_max = 100000)
+eventos     <- read_csv("venv/data/clean/eventos.csv")
+sesiones    <- read_csv("venv/data/clean/sesiones.csv")
+standings   <- read_csv("venv/data/clean/standings.csv")
+
+# ==========================================================================================
+# Paso R3: primera mirada
+
+dim(clasif)       # deberían ser 33106 filas y 23 columnas
+glimpse(clasif)
+
+glimpse(eventos)
+
+glimpse(sesiones)
+
+# chequeo variable status en clasif que significa
+clasif %>%
+  count(status, sort = TRUE)
+

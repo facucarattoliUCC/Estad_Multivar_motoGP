@@ -1,0 +1,13 @@
+dataset,problema,variable,n_afectados,criterio,decision,justificacion
+clasif,faltantes,"mejor_vuelta_s, vuelta_mejor",6255,NA por status y tipo de sesión,"Conservar NA, no imputar",Estructural: RAC y SPR no traen el dato; resto son pilotos sin vuelta
+clasif,faltantes,"top_speed, gap_previo_s",6041,100 % NA en RAC y SPR (4701 + 1340),"Conservar NA, no imputar",La fuente no registra el dato en carreras y sprints
+clasif,faltantes,posicion,1362,NA en status distinto de INSTND,Conservar NA,Piloto sin clasificar: la posición no existe
+clasif,faltantes,number,12028,"NA en WUP, RAC, SPR, PR, TTS y 193 FP",Conservar NA,Estructural: sesiones únicas no se numeran
+sesiones,faltantes,"aire, humedad, suelo (valor 'º' / '%')",20,Texto con símbolo y sin número,"Convertir a NA (aire_c, humedad_pct, suelo_c)",Faltante disfrazado; no se puede reconstruir
+sesiones,faltantes,"pista, clima",8,NA reales,Conservar NA,Casos aislados sin patrón por año
+eventos / standings,faltantes,country / equipo,2,NA reales (1 y 1),Conservar NA,Casos aislados
+todas,duplicados,fila completa y claves naturales,0,duplicated() y conteo por clave,No se elimina ninguna fila,No hay duplicados
+clasif,imposibles,top_speed <= 0,214,Velocidad 0 con vueltas = 0 y sin mejor_vuelta_s,"Convertir a NA, conservar la fila","El 0 es ausencia de dato, no medición"
+todas,imposibles,otras 9 reglas de dominio,0,"posición, tiempos, gaps, vueltas, humedad, puntos",Sin acción,Todos los valores dentro de rangos posibles
+clasif,atipicos,mejor_vuelta_s,1962,"Tukey [Q1-1.5*IQR, Q3+1.5*IQR] por circuito x tipo",Marcar con out_mejor_vuelta_s y conservar,"Extremos plausibles (lluvia, bandera roja)"
+clasif,atipicos,top_speed,654,"Tukey [Q1-1.5*IQR, Q3+1.5*IQR] por circuito x tipo",Marcar con out_top_speed y conservar,Valores altos o bajos plausibles; los imposibles ya se trataron

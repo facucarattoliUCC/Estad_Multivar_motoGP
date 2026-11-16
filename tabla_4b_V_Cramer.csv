@@ -1,0 +1,6 @@
+"","fabricante","anio","tipo_sesion","estado_pista","clima"
+"fabricante",1,0.141,0.057,0.015,0.017
+"anio",0.141,1,0.258,0.169,0.157
+"tipo_sesion",0.057,0.258,1,0.09,0.057
+"estado_pista",0.015,0.169,0.09,1,0.645
+"clima",0.017,0.157,0.057,0.645,1

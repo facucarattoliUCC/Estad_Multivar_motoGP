@@ -1,0 +1,5 @@
+cluster,n,pct,vueltas,gap_primero_s,gap_previo_s,n_sesiones_mediana,rasgos_auto,fabricantes_top,anio_mediano,anio_min,anio_max,casos_tipicos,nombre,hipotesis
+1,43,12.8,13.9,2.69,0.51,15,"ALTO: gap_primero_s, gap_previo_s | BAJO: ","Honda (26%), Yamaha (19%)",2017,2015,2025,Remy Gardner 2024; Toni Elias 2015; Tetsuta Nagashima 2022,,
+2,4,1.2,15.08,5.43,3.04,6,"ALTO: vueltas, gap_primero_s, gap_previo_s | BAJO: ","Ducati (25%), Honda (25%)",2020,2015,2023,Christophe Ponsson 2018; Kazuki Watanabe 2022; Takumi Takahashi 2023,,
+3,161,47.8,13.12,1.25,0.15,102,ALTO:  | BAJO: vueltas,"Ducati (37%), Honda (19%)",2021,2015,2025,Yonny Hernandez 2015; Alex Rins 2024; Scott Redding 2016,,
+4,129,38.3,14.67,0.87,0.11,103,ALTO: vueltas | BAJO: gap_primero_s,"Ducati (25%), Yamaha (24%)",2020,2015,2025,Valentino Rossi 2018; Brad Binder 2022; Valentino Rossi 2016,,
